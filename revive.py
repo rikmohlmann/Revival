@@ -1,10 +1,4 @@
 
-# prompt: 
-# write a minimalistic text adventure game 
-# in which the player is an artist with a crumbled art career 
-# in the context of a crumbled art scene 
-# in a crubled Dutch coastal city.
-
 class Player:
     def __init__(self):
         self.name = ""
@@ -22,7 +16,6 @@ class Game:
 
     def start(self):
         print("Welcome to the Dutch coast!")
-        self.player.set_name()
         print(f"Hello, {self.player.name}! It's time to revive your crumbled art career.")
         self.main_quest()
 
