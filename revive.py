@@ -1,18 +1,32 @@
 
 class Player:
-    def __init__(self):
+    def __init__(self, name="", age=0, gender=None, politics=None, 
+                 health=70, talent=None, social=None):
         self.name = ""
+        self.age = age
+        self.gender = gender
+        self.politics = politics
+        self.health = health
+        self.talent = talent
+        self.social = social
         self.art_career = False
 
-    def set_name(self):
+    def set_attributes(self):
         self.name = input("What's your name, adventurer? ")
-
+        self.age = int(input("How old are you? "))
+        self.gender = input("What gender do you identify with? ")
+        self.politics = input("What are your political views? ")
+        self.health = int(input("How would you rate your health on a scale of 0 to 100? "))
+        self.talent = input("What is your talent? ")
+        self.social = input("How would you describe your social skills? ")
+       
     def revive_art_career(self):
         self.art_career = True
 
 class Game:
     def __init__(self):
         self.player = Player()
+        self.player.set_attributes()
 
     def start(self):
         print("Welcome to the Dutch coast!")
